@@ -14,6 +14,12 @@
 		328A3CA62BB2DE5900B72204 /* SurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CA52BB2DE5900B72204 /* SurveyTests.swift */; };
 		328A3CB02BB2DE5900B72204 /* SurveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CAF2BB2DE5900B72204 /* SurveyUITests.swift */; };
 		328A3CB22BB2DE5900B72204 /* SurveyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CB12BB2DE5900B72204 /* SurveyUITestsLaunchTests.swift */; };
+		328A3CD22BB4524100B72204 /* LoggerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CBE2BB4524100B72204 /* LoggerInfo.swift */; };
+		328A3CD32BB4524100B72204 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CBF2BB4524100B72204 /* NetworkError.swift */; };
+		328A3CD52BB4524100B72204 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CC22BB4524100B72204 /* NetworkingManager.swift */; };
+		328A3CD62BB4524100B72204 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CC32BB4524100B72204 /* RequestProtocol.swift */; };
+		328A3CD72BB4524100B72204 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CC42BB4524100B72204 /* RequestType.swift */; };
+		328A3CDC2BB4542F00B72204 /* QuestionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CDB2BB4542F00B72204 /* QuestionsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		328A3CAB2BB2DE5900B72204 /* SurveyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		328A3CAF2BB2DE5900B72204 /* SurveyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUITests.swift; sourceTree = "<group>"; };
 		328A3CB12BB2DE5900B72204 /* SurveyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		328A3CBE2BB4524100B72204 /* LoggerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerInfo.swift; sourceTree = "<group>"; };
+		328A3CBF2BB4524100B72204 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		328A3CC22BB4524100B72204 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		328A3CC32BB4524100B72204 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		328A3CC42BB4524100B72204 /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		328A3CDB2BB4542F00B72204 /* QuestionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,8 @@
 		328A3C932BB2DE5800B72204 /* Survey */ = {
 			isa = PBXGroup;
 			children = (
+				328A3CD92BB4528100B72204 /* Networking */,
+				328A3CDA2BB4538C00B72204 /* Services */,
 				328A3C942BB2DE5800B72204 /* SurveyApp.swift */,
 				328A3C962BB2DE5800B72204 /* ContentView.swift */,
 				328A3C982BB2DE5900B72204 /* Assets.xcassets */,
@@ -125,6 +139,26 @@
 				328A3CB12BB2DE5900B72204 /* SurveyUITestsLaunchTests.swift */,
 			);
 			path = SurveyUITests;
+			sourceTree = "<group>";
+		};
+		328A3CD92BB4528100B72204 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				328A3CBE2BB4524100B72204 /* LoggerInfo.swift */,
+				328A3CBF2BB4524100B72204 /* NetworkError.swift */,
+				328A3CC22BB4524100B72204 /* NetworkingManager.swift */,
+				328A3CC32BB4524100B72204 /* RequestProtocol.swift */,
+				328A3CC42BB4524100B72204 /* RequestType.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		328A3CDA2BB4538C00B72204 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				328A3CDB2BB4542F00B72204 /* QuestionsRequest.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +292,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				328A3C972BB2DE5800B72204 /* ContentView.swift in Sources */,
+				328A3CD32BB4524100B72204 /* NetworkError.swift in Sources */,
+				328A3CD52BB4524100B72204 /* NetworkingManager.swift in Sources */,
+				328A3CD22BB4524100B72204 /* LoggerInfo.swift in Sources */,
 				328A3C952BB2DE5800B72204 /* SurveyApp.swift in Sources */,
+				328A3CDC2BB4542F00B72204 /* QuestionsRequest.swift in Sources */,
+				328A3CD62BB4524100B72204 /* RequestProtocol.swift in Sources */,
+				328A3CD72BB4524100B72204 /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
