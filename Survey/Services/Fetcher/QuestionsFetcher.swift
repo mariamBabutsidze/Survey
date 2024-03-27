@@ -9,10 +9,13 @@ import Foundation
 
 protocol QuestionsFetcher {
     func fetchQuestions() async throws -> [Question]
+}
+
+protocol AnswerSubmiter {
     func submitAnswer(id: Int, answer: String) async throws
 }
 
-actor FetchQuestionsService: QuestionsFetcher  {
+actor FetchQuestionsService: QuestionsFetcher, AnswerSubmiter  {
     func fetchQuestions() async throws -> [Question] {
         let requestData = QuestionsRequest.questionList
         let questions: [Question] = try await NetworkingManager().load(requestData)

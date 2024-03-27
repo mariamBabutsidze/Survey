@@ -11,3 +11,7 @@ struct Question: Decodable {
     let id: Int
     let question: String
 }
+
+extension Question {
+    static let mock = Self(id: 10, question: "What is your name?")
+}
