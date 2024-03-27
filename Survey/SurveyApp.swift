@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct SurveyApp: App {
+    @StateObject private var navigationState = NavigationState()
+    
     var body: some Scene {
         WindowGroup {
-            WelcomeView(model: QuestionsBusinessModel())
+            NavigationStack(path: $navigationState.routers) {
+                ContentView()
+                    .navigationDestination(for: Routers.self) { router in
+                        switch router {
+                        case .welcome(let routers):
+                            WelcomeRouter(routers: routers).configure()
+                        }
+                    }
+            }
+            .environmentObject(navigationState)
         }
     }
 }

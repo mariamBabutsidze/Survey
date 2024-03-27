@@ -9,7 +9,9 @@ import Foundation
 
 protocol QuestionsBusinessModelWelcome {
     var isLoading: Bool { get }
+    var showQuestions: Bool { get }
     func startButtonTapped() async
+    func questionsOpened()
 }
 
 @Observable
@@ -26,6 +28,7 @@ class QuestionsBusinessModel: QuestionsBusinessModelWelcome {
         }
     }
     var isLoading = false
+    var showQuestions = false
     
     init(questionsFetcher: QuestionsFetcher = FetchQuestionsService()) {
         self.questionsFetcher = questionsFetcher
@@ -36,8 +39,13 @@ class QuestionsBusinessModel: QuestionsBusinessModelWelcome {
         isLoading = true
         do {
             questions = try await questionsFetcher.fetchQuestions()
+            showQuestions = true
         } catch(let error) {
             self.error = error
         }
+    }
+    
+    func questionsOpened() {
+        showQuestions = false
     }
 }

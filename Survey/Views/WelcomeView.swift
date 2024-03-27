@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @EnvironmentObject private var navigationState: NavigationState
     var model: QuestionsBusinessModelWelcome
     
     var body: some View {
@@ -26,6 +27,12 @@ struct WelcomeView: View {
             }
             .buttonStyle(SubmitButtonStyle())
             .disabled(model.isLoading)
+            .onChange(of: model.showQuestions) {
+                if model.showQuestions {
+                    navigationState.routers.append(.welcome(.questions))
+                    model.questionsOpened()
+                }
+            }
         }
     }
 }
