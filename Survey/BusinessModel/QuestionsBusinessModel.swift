@@ -12,6 +12,8 @@ protocol QuestionsBusinessModelImpl: ObservableObject {
     var questions: [Question] { get }
     var selectedIndex: Int { get set }
     var submittedAnswers: Int { get set }
+    func nextTapped()
+    func previousTapped()
 }
 
 final class QuestionsBusinessModel: QuestionsBusinessModelImpl, ObservableObject {
@@ -21,5 +23,13 @@ final class QuestionsBusinessModel: QuestionsBusinessModelImpl, ObservableObject
     
     init(questions: [Question]) {
         self.questions = questions
+    }
+    
+    func nextTapped() {
+        selectedIndex += 1
+    }
+    
+    func previousTapped() {
+        selectedIndex -= 1
     }
 }

@@ -30,7 +30,7 @@ struct QuestionsView<Model: QuestionsBusinessModelImpl>: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    
+                    model.previousTapped()
                 }) {
                     Text("Previous")
                 }
@@ -38,7 +38,7 @@ struct QuestionsView<Model: QuestionsBusinessModelImpl>: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    
+                    model.nextTapped()
                 }) {
                     Text("Next")
                 }
