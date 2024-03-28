@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32332C172BB563DB00A55524 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 32332C162BB563DB00A55524 /* SwiftUINavigation */; };
+		32332C192BB563DB00A55524 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 32332C182BB563DB00A55524 /* SwiftUINavigationCore */; };
+		32332C1B2BB58F4D00A55524 /* WelcomeBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32332C1A2BB58F4D00A55524 /* WelcomeBusinessModel.swift */; };
 		328A3C952BB2DE5800B72204 /* SurveyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3C942BB2DE5800B72204 /* SurveyApp.swift */; };
 		328A3C972BB2DE5800B72204 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3C962BB2DE5800B72204 /* WelcomeView.swift */; };
 		328A3C992BB2DE5900B72204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328A3C982BB2DE5900B72204 /* Assets.xcassets */; };
@@ -24,11 +27,7 @@
 		328A3CE52BB4557200B72204 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CE42BB4557200B72204 /* Question.swift */; };
 		328A3CE82BB46D2200B72204 /* SubmitButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CE72BB46D2200B72204 /* SubmitButtonStyle.swift */; };
 		328A3CEC2BB4706B00B72204 /* QuestionsBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CEB2BB4706B00B72204 /* QuestionsBusinessModel.swift */; };
-		328A3CEF2BB4834B00B72204 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CEE2BB4834B00B72204 /* NavigationState.swift */; };
-		328A3CF12BB4836B00B72204 /* Routers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CF02BB4836B00B72204 /* Routers.swift */; };
-		328A3CF32BB483A200B72204 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CF22BB483A200B72204 /* WelcomeRouter.swift */; };
 		328A3CF72BB4877800B72204 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CF62BB4877800B72204 /* QuestionsView.swift */; };
-		328A3CF92BB48A0C00B72204 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CF82BB48A0C00B72204 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32332C1A2BB58F4D00A55524 /* WelcomeBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBusinessModel.swift; sourceTree = "<group>"; };
 		328A3C912BB2DE5800B72204 /* Survey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Survey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328A3C942BB2DE5800B72204 /* SurveyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyApp.swift; sourceTree = "<group>"; };
 		328A3C962BB2DE5800B72204 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -69,11 +69,7 @@
 		328A3CE42BB4557200B72204 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		328A3CE72BB46D2200B72204 /* SubmitButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButtonStyle.swift; sourceTree = "<group>"; };
 		328A3CEB2BB4706B00B72204 /* QuestionsBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBusinessModel.swift; sourceTree = "<group>"; };
-		328A3CEE2BB4834B00B72204 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
-		328A3CF02BB4836B00B72204 /* Routers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routers.swift; sourceTree = "<group>"; };
-		328A3CF22BB483A200B72204 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		328A3CF62BB4877800B72204 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
-		328A3CF82BB48A0C00B72204 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32332C172BB563DB00A55524 /* SwiftUINavigation in Frameworks */,
+				32332C192BB563DB00A55524 /* SwiftUINavigationCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,13 +124,11 @@
 			children = (
 				328A3CD92BB4528100B72204 /* Networking */,
 				328A3CDA2BB4538C00B72204 /* Services */,
-				328A3CED2BB4831D00B72204 /* Routers */,
 				328A3CE32BB4556800B72204 /* Models */,
 				328A3CEA2BB4705700B72204 /* BusinessModel */,
 				328A3CE92BB4702600B72204 /* Views */,
 				328A3CE62BB46CF000B72204 /* CommonUI */,
 				328A3C942BB2DE5800B72204 /* SurveyApp.swift */,
-				328A3CF82BB48A0C00B72204 /* ContentView.swift */,
 				328A3C982BB2DE5900B72204 /* Assets.xcassets */,
 				328A3C9A2BB2DE5900B72204 /* Preview Content */,
 			);
@@ -230,18 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				328A3CEB2BB4706B00B72204 /* QuestionsBusinessModel.swift */,
+				32332C1A2BB58F4D00A55524 /* WelcomeBusinessModel.swift */,
 			);
 			path = BusinessModel;
-			sourceTree = "<group>";
-		};
-		328A3CED2BB4831D00B72204 /* Routers */ = {
-			isa = PBXGroup;
-			children = (
-				328A3CEE2BB4834B00B72204 /* NavigationState.swift */,
-				328A3CF02BB4836B00B72204 /* Routers.swift */,
-				328A3CF22BB483A200B72204 /* WelcomeRouter.swift */,
-			);
-			path = Routers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +247,10 @@
 			dependencies = (
 			);
 			name = Survey;
+			packageProductDependencies = (
+				32332C162BB563DB00A55524 /* SwiftUINavigation */,
+				32332C182BB563DB00A55524 /* SwiftUINavigationCore */,
+			);
 			productName = Survey;
 			productReference = 328A3C912BB2DE5800B72204 /* Survey.app */;
 			productType = "com.apple.product-type.application";
@@ -332,6 +323,9 @@
 				Base,
 			);
 			mainGroup = 328A3C882BB2DE5800B72204;
+			packageReferences = (
+				32332C152BB563DB00A55524 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
+			);
 			productRefGroup = 328A3C922BB2DE5800B72204 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -376,13 +370,10 @@
 			files = (
 				328A3C972BB2DE5800B72204 /* WelcomeView.swift in Sources */,
 				328A3CD32BB4524100B72204 /* NetworkError.swift in Sources */,
-				328A3CF12BB4836B00B72204 /* Routers.swift in Sources */,
-				328A3CF32BB483A200B72204 /* WelcomeRouter.swift in Sources */,
+				32332C1B2BB58F4D00A55524 /* WelcomeBusinessModel.swift in Sources */,
 				328A3CF72BB4877800B72204 /* QuestionsView.swift in Sources */,
 				328A3CE82BB46D2200B72204 /* SubmitButtonStyle.swift in Sources */,
 				328A3CD52BB4524100B72204 /* NetworkingManager.swift in Sources */,
-				328A3CF92BB48A0C00B72204 /* ContentView.swift in Sources */,
-				328A3CEF2BB4834B00B72204 /* NavigationState.swift in Sources */,
 				328A3CD22BB4524100B72204 /* LoggerInfo.swift in Sources */,
 				328A3C952BB2DE5800B72204 /* SurveyApp.swift in Sources */,
 				328A3CE52BB4557200B72204 /* Question.swift in Sources */,
@@ -720,6 +711,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32332C152BB563DB00A55524 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation?tab=readme-ov-file#documentation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32332C162BB563DB00A55524 /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32332C152BB563DB00A55524 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigation;
+		};
+		32332C182BB563DB00A55524 /* SwiftUINavigationCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32332C152BB563DB00A55524 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigationCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 328A3C892BB2DE5800B72204 /* Project object */;
 }

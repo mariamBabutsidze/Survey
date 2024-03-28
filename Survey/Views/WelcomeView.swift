@@ -6,18 +6,19 @@
 //
 
 import SwiftUI
+import SwiftUINavigation
 
-struct WelcomeView: View {
-    @EnvironmentObject private var navigationState: NavigationState
-    var model: QuestionsBusinessModelWelcome
+struct WelcomeView<Model: WelcomeBusinessModelIImpl>: View {
+    @ObservedObject var model: Model
     
     var body: some View {
-        VStack {
-            Button {
-                Task {
-                    await model.startButtonTapped()
+        NavigationStack {
+            VStack {
+                Button {
+                    Task {
+                        await model.startButtonTapped()
+                    }
                 }
-            }
             label: {
                 if model.isLoading {
                     ProgressView()
@@ -27,16 +28,16 @@ struct WelcomeView: View {
             }
             .buttonStyle(SubmitButtonStyle())
             .disabled(model.isLoading)
-            .onChange(of: model.showQuestions) {
-                if model.showQuestions {
-                    navigationState.routers.append(.welcome(.questions))
-                    model.questionsOpened()
-                }
+            }
+            .navigationDestination(
+                unwrapping: $model.destination, case: /WelcomeBusinessModel.Destination.questions
+            ) { $questions in
+                QuestionsView(model: QuestionsBusinessModel(questions: questions))
             }
         }
     }
 }
 
 #Preview {
-    WelcomeView(model: QuestionsBusinessModel())
+    WelcomeView(model: WelcomeBusinessModel())
 }

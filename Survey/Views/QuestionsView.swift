@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct QuestionsView: View {
+struct QuestionsView<Model: QuestionsBusinessModelImpl>: View {
+    @ObservedObject var model: Model
     
     var body: some View {
         Button {
@@ -21,5 +22,5 @@ struct QuestionsView: View {
 }
 
 #Preview {
-    QuestionsView()
+    QuestionsView(model: QuestionsBusinessModel(questions: Question.mock))
 }
