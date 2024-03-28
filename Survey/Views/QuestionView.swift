@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import Combine
 
 struct QuestionView: View {
     var question: Question
     @State var answer: String = ""
+    var submitted: Bool
+    var index: Int
+    var subject: PassthroughSubject<(Int, Int, String), Never>
     
     var body: some View {
         VStack {
@@ -20,17 +24,18 @@ struct QuestionView: View {
                 .padding()
                 .bold()
             Button {
-                
+                subject.send((question.id, index, answer))
             }
             label: {
-                Text("Submit")
+                Text(submitted ? "Already Submitted" : " Submit")
             }
             .buttonStyle(SubmitButtonStyle())
+            .disabled(submitted || answer.isEmpty)
             Spacer()
         }
     }
 }
 
 #Preview {
-    QuestionView(question: Question.mock)
+    QuestionView(question: Question.mock, answer: "", submitted: false, index: 0, subject: PassthroughSubject<(Int, Int, String), Never>())
 }

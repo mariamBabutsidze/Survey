@@ -12,7 +12,7 @@ protocol QuestionsFetcher {
 }
 
 protocol AnswerSubmiter {
-    func submitAnswer(id: Int, answer: String) async throws
+    func submitAnswer(_ answer: Answer) async throws
 }
 
 actor FetchQuestionsService: QuestionsFetcher, AnswerSubmiter  {
@@ -22,8 +22,8 @@ actor FetchQuestionsService: QuestionsFetcher, AnswerSubmiter  {
         return questions
     }
     
-    func submitAnswer(id: Int, answer: String) async throws {
-        let requestData = QuestionsRequest.submit(id, answer)
+    func submitAnswer(_ answer: Answer) async throws {
+        let requestData = QuestionsRequest.submit(answer.id, answer.text)
         _ = try await NetworkingManager().load(requestData)
     }
 }
