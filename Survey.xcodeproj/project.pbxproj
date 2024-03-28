@@ -10,6 +10,7 @@
 		32332C172BB563DB00A55524 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 32332C162BB563DB00A55524 /* SwiftUINavigation */; };
 		32332C192BB563DB00A55524 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 32332C182BB563DB00A55524 /* SwiftUINavigationCore */; };
 		32332C1B2BB58F4D00A55524 /* WelcomeBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32332C1A2BB58F4D00A55524 /* WelcomeBusinessModel.swift */; };
+		32332C1D2BB591C000A55524 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32332C1C2BB591C000A55524 /* QuestionView.swift */; };
 		328A3C952BB2DE5800B72204 /* SurveyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3C942BB2DE5800B72204 /* SurveyApp.swift */; };
 		328A3C972BB2DE5800B72204 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3C962BB2DE5800B72204 /* WelcomeView.swift */; };
 		328A3C992BB2DE5900B72204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328A3C982BB2DE5900B72204 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		32332C1A2BB58F4D00A55524 /* WelcomeBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBusinessModel.swift; sourceTree = "<group>"; };
+		32332C1C2BB591C000A55524 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		328A3C912BB2DE5800B72204 /* Survey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Survey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328A3C942BB2DE5800B72204 /* SurveyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyApp.swift; sourceTree = "<group>"; };
 		328A3C962BB2DE5800B72204 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				328A3C962BB2DE5800B72204 /* WelcomeView.swift */,
 				328A3CF62BB4877800B72204 /* QuestionsView.swift */,
+				32332C1C2BB591C000A55524 /* QuestionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				328A3C952BB2DE5800B72204 /* SurveyApp.swift in Sources */,
 				328A3CE52BB4557200B72204 /* Question.swift in Sources */,
 				328A3CE02BB4553D00B72204 /* QuestionsFetcher.swift in Sources */,
+				32332C1D2BB591C000A55524 /* QuestionView.swift in Sources */,
 				328A3CDC2BB4542F00B72204 /* QuestionsRequest.swift in Sources */,
 				328A3CD62BB4524100B72204 /* RequestProtocol.swift in Sources */,
 				328A3CD72BB4524100B72204 /* RequestType.swift in Sources */,

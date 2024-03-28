@@ -10,10 +10,14 @@ import SwiftUINavigation
 
 protocol QuestionsBusinessModelImpl: ObservableObject {
     var questions: [Question] { get }
+    var selectedIndex: Int { get set }
+    var submittedAnswers: Int { get set }
 }
 
 final class QuestionsBusinessModel: QuestionsBusinessModelImpl, ObservableObject {
-    var questions: [Question] = []
+    @Published var selectedIndex: Int = 0
+    @Published var submittedAnswers: Int = 0
+    private(set) var questions: [Question] = []
     
     init(questions: [Question]) {
         self.questions = questions
