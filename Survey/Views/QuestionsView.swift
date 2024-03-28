@@ -27,6 +27,24 @@ struct QuestionsView<Model: QuestionsBusinessModelImpl>: View {
         }
         .navigationTitle("\(model.selectedIndex + 1)/\(model.questions.count)")
         .tabViewStyle(.page)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    
+                }) {
+                    Text("Previous")
+                }
+                .disabled(model.selectedIndex == 0)
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    
+                }) {
+                    Text("Next")
+                }
+                .disabled(model.selectedIndex == model.questions.count - 1)
+            }
+        }
     }
 }
 
