@@ -26,8 +26,9 @@ struct QuestionsView<Model: QuestionsBusinessModelImpl>: View {
                 TabView(selection: $model.selectedIndex) {
                     ForEach(Array(model.questions.enumerated()), id: \.offset) { index, question in
                         let answer = model.answers[index]
-                        QuestionView(question: question, answer: answer.text, submitted: !answer.text.isEmpty, index: index, subject: model.subject)
+                        QuestionView(question: question, answer: answer, submitted: !answer.isEmpty, index: index, subject: model.subject)
                     }
+                    .disabled(model.isLoading)
                 }
                 .navigationTitle("\(model.selectedIndex + 1)/\(model.questions.count)")
                 .tabViewStyle(.page)
@@ -50,7 +51,6 @@ struct QuestionsView<Model: QuestionsBusinessModelImpl>: View {
                     }
                 }
             }
-            .disabled(model.isLoading)
             if model.isLoading {
                 ProgressView()
             }

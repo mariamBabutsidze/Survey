@@ -23,6 +23,7 @@ struct QuestionView: View {
                 .textFieldStyle(.roundedBorder)
                 .padding()
                 .bold()
+                .disabled(submitted)
             Button {
                 subject.send((question.id, index, answer))
             }
