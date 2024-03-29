@@ -14,14 +14,14 @@ protocol QuestionsBusinessModelImpl: ObservableObject {
     var answers: [String] { get }
     var selectedIndex: Int { get set }
     var submittedAnswers: Int { get set }
-    func nextTapped()
-    func previousTapped()
     var subject: PassthroughSubject<(Int, Int, String), Never> { get }
     var isLoading: Bool { get }
     var destination: QuestionsBusinessModel.Destination? { get set }
+    func nextTapped()
+    func previousTapped()
 }
 
-final class QuestionsBusinessModel: QuestionsBusinessModelImpl, ObservableObject {
+final class QuestionsBusinessModel: NSObject, QuestionsBusinessModelImpl, ObservableObject {
     @Published var destination: QuestionsBusinessModel.Destination?
     @Published var selectedIndex: Int = 0
     @Published var submittedAnswers: Int = 0
@@ -34,7 +34,7 @@ final class QuestionsBusinessModel: QuestionsBusinessModelImpl, ObservableObject
     let subject = PassthroughSubject<(Int, Int, String), Never>()
     
     @CasePathable
-    enum Destination {
+    enum Destination: Equatable {
         case alert(AlertState<AlertAction>)
     }
     
@@ -44,6 +44,7 @@ final class QuestionsBusinessModel: QuestionsBusinessModelImpl, ObservableObject
     
     init(destination: Destination? = nil, questions: [Question], answersSubmitter: AnswerSubmiter = FetchQuestionsService()) {
         self.answersSubmitter = answersSubmitter
+        super.init()
         self.questions = questions
         self.destination = destination
         answers = Array(repeating: "", count: questions.count)
