@@ -15,23 +15,29 @@ protocol WelcomeBusinessModelIImpl: ObservableObject {
 }
 
 final class WelcomeBusinessModel: WelcomeBusinessModelIImpl, ObservableObject {
-    private let questionsFetcher: QuestionsFetcher
     @Published var destination: Destination?
-    @Published var questions: [Question] = [] {
-        didSet {
-            isLoading = false
-        }
-    }
-    @Published var error: Error? = nil {
-        didSet {
-            isLoading = false
-        }
-    }
     @Published var isLoading = false
     
+    private let questionsFetcher: QuestionsFetcher
+    private var error: Error? = nil {
+        didSet {
+            isLoading = false
+        }
+    }
+    private var questions: [Question] = [] {
+        didSet {
+            isLoading = false
+        }
+    }
+    
     @CasePathable
-    enum Destination {
+    enum Destination: Equatable {
         case questions([Question])
+        case  alert(AlertState<AlertAction>)
+    }
+    
+    enum AlertAction {
+        case confirm
     }
     
     init(questionsFetcher: QuestionsFetcher = FetchQuestionsService(), destination: Destination? = nil) {
@@ -47,6 +53,13 @@ final class WelcomeBusinessModel: WelcomeBusinessModelIImpl, ObservableObject {
             destination = .questions(questions)
         } catch(let error) {
             self.error = error
+            destination = .alert(.ok)
         }
     }
+}
+
+extension AlertState where Action == WelcomeBusinessModel.AlertAction {
+    static let ok = AlertState(
+        title: TextState("Error loading questions")
+    )
 }

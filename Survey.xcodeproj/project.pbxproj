@@ -12,11 +12,12 @@
 		32332C1B2BB58F4D00A55524 /* WelcomeBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32332C1A2BB58F4D00A55524 /* WelcomeBusinessModel.swift */; };
 		32332C1D2BB591C000A55524 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32332C1C2BB591C000A55524 /* QuestionView.swift */; };
 		32332C1F2BB59DA800A55524 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32332C1E2BB59DA800A55524 /* Answer.swift */; };
+		32332C212BB6FEDC00A55524 /* QuestionsBusinessModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32332C202BB6FEDC00A55524 /* QuestionsBusinessModelTests.swift */; };
+		32332C232BB6FF5E00A55524 /* WelcomeBusinessModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32332C222BB6FF5E00A55524 /* WelcomeBusinessModelTests.swift */; };
 		328A3C952BB2DE5800B72204 /* SurveyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3C942BB2DE5800B72204 /* SurveyApp.swift */; };
 		328A3C972BB2DE5800B72204 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3C962BB2DE5800B72204 /* WelcomeView.swift */; };
 		328A3C992BB2DE5900B72204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328A3C982BB2DE5900B72204 /* Assets.xcassets */; };
 		328A3C9C2BB2DE5900B72204 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328A3C9B2BB2DE5900B72204 /* Preview Assets.xcassets */; };
-		328A3CA62BB2DE5900B72204 /* SurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CA52BB2DE5900B72204 /* SurveyTests.swift */; };
 		328A3CB02BB2DE5900B72204 /* SurveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CAF2BB2DE5900B72204 /* SurveyUITests.swift */; };
 		328A3CB22BB2DE5900B72204 /* SurveyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CB12BB2DE5900B72204 /* SurveyUITestsLaunchTests.swift */; };
 		328A3CD22BB4524100B72204 /* LoggerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3CBE2BB4524100B72204 /* LoggerInfo.swift */; };
@@ -53,13 +54,14 @@
 		32332C1A2BB58F4D00A55524 /* WelcomeBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBusinessModel.swift; sourceTree = "<group>"; };
 		32332C1C2BB591C000A55524 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		32332C1E2BB59DA800A55524 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		32332C202BB6FEDC00A55524 /* QuestionsBusinessModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBusinessModelTests.swift; sourceTree = "<group>"; };
+		32332C222BB6FF5E00A55524 /* WelcomeBusinessModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBusinessModelTests.swift; sourceTree = "<group>"; };
 		328A3C912BB2DE5800B72204 /* Survey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Survey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328A3C942BB2DE5800B72204 /* SurveyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyApp.swift; sourceTree = "<group>"; };
 		328A3C962BB2DE5800B72204 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		328A3C982BB2DE5900B72204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		328A3C9B2BB2DE5900B72204 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		328A3CA12BB2DE5900B72204 /* SurveyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		328A3CA52BB2DE5900B72204 /* SurveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTests.swift; sourceTree = "<group>"; };
 		328A3CAB2BB2DE5900B72204 /* SurveyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		328A3CAF2BB2DE5900B72204 /* SurveyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUITests.swift; sourceTree = "<group>"; };
 		328A3CB12BB2DE5900B72204 /* SurveyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -150,7 +152,8 @@
 		328A3CA42BB2DE5900B72204 /* SurveyTests */ = {
 			isa = PBXGroup;
 			children = (
-				328A3CA52BB2DE5900B72204 /* SurveyTests.swift */,
+				32332C202BB6FEDC00A55524 /* QuestionsBusinessModelTests.swift */,
+				32332C222BB6FF5E00A55524 /* WelcomeBusinessModelTests.swift */,
 			);
 			path = SurveyTests;
 			sourceTree = "<group>";
@@ -397,7 +400,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				328A3CA62BB2DE5900B72204 /* SurveyTests.swift in Sources */,
+				32332C232BB6FF5E00A55524 /* WelcomeBusinessModelTests.swift in Sources */,
+				32332C212BB6FEDC00A55524 /* QuestionsBusinessModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

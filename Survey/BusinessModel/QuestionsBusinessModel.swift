@@ -25,12 +25,13 @@ final class QuestionsBusinessModel: QuestionsBusinessModelImpl, ObservableObject
     @Published var destination: QuestionsBusinessModel.Destination?
     @Published var selectedIndex: Int = 0
     @Published var submittedAnswers: Int = 0
-    private(set) var answers: [String] = []
     @Published var isLoading: Bool = false
-    private let answersSubmitter: AnswerSubmiter
+    
+    private(set) var answers: [String] = []
     private(set) var questions: [Question] = []
-    let subject = PassthroughSubject<(Int, Int, String), Never>()
+    private let answersSubmitter: AnswerSubmiter
     private var subscriber: AnyCancellable?
+    let subject = PassthroughSubject<(Int, Int, String), Never>()
     
     @CasePathable
     enum Destination {

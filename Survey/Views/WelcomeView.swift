@@ -34,6 +34,12 @@ struct WelcomeView<Model: WelcomeBusinessModelIImpl>: View {
             ) { $questions in
                 QuestionsView(model: QuestionsBusinessModel(questions: questions))
             }
+            .alert(
+              unwrapping: $model.destination,
+              case: /WelcomeBusinessModel.Destination.alert
+            ) {_ in
+                
+            }
         }
     }
 }
